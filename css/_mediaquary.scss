@@ -1,0 +1,201 @@
+// 사이드네비
+@media (max-width: 1024px) {
+    .hamburger {
+    display: block !important;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #d62300;
+    cursor: pointer;
+    }
+   .sidemenu {
+    position: fixed;
+    top: 0;
+    right: -280px; // 처음에는 오른쪽 바깥에 숨김
+    width: 230px;
+    height: 100vh;
+    background-color: #f5ebdc;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 20px 40px;
+    gap: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    overflow: visible !important;
+        .menu {
+        flex-direction: column;
+        position: static;
+        margin-top: 70px;
+            > li {
+                height: auto !important;
+                .submenu > li:hover {
+                    color: #d62300;
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+    .sidemenu.active {
+        right: 0; // 햄버거 클릭 시 나옴
+    }
+    .navright {
+        position: relative;
+        right: 50px;
+        scale: 0.8;
+        z-index: 1002;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px){
+    .section-wrap {
+        .app-banner { margin-bottom: 350px !important;}
+        width: 100% !important;
+        .app-title {
+            font-size: 40px !important;
+            margin-bottom: 20px !important;
+        }
+        .app-wrap {
+            height: 800px !important;
+            background-position: -200px 0 !important;
+            .appbox {
+            flex-wrap: wrap !important;
+                .app {
+                    width: 30% !important;
+                }
+            }
+        }
+        .coupon-wrap {
+            .withcoupon {
+                .coupon-desc {
+                    font-size: 18px !important;
+                }
+            }
+        } 
+        // 유튜브
+        .youtube-wrap {
+            .tube-title {font-size: 42px;}
+            .krispper {
+                flex-direction: column;
+                align-items: center;
+                .krispper-girl, .krispper-boy {
+                    text-align: center !important;
+                }
+                .krispper-img {display: none;}
+            }
+        }      
+    }
+    footer {
+        .footer-logo {
+            width: 400px !important;
+        }
+        .footer-text {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 768px) and (min-width: 375px){
+.section-wrap {
+    width: 100% !important; 
+    .app-banner { margin-bottom: 250px !important;}
+    .app-wrap {
+        height: 680px !important;
+        .appbox {
+        flex-wrap: wrap !important;
+            .app {
+                width: 250px !important;
+                height: 250px !important; 
+                .iconbox {
+                    .icon {
+                        width: 140px !important;
+                        height: 140px !important;
+                    }
+                }
+            }
+        }
+    }
+    .coupon-wrap {
+        .withcoupon {
+            padding: 0 0 !important;
+            .coupon-desc {
+                font-size: 16px !important;
+            }
+        }
+    }     
+}
+    footer {
+        .footer-logo {
+            width: 300px !important;
+        }
+        .footer-text {
+            font-size: 11px;
+        }
+    }
+}
+
+@media (max-width: 378px) {
+   .wrapper {
+    max-width: 378px !important;
+        header{
+            width: 378px !important;
+        }
+        //  아이템슬라이더 탭버튼
+        .tab {
+            width: 100px !important; 
+            height: 40px !important; 
+            font-size: 14px !important;
+        }
+        .app-banner{
+            margin-bottom: 600px !important;
+            .app-wrap {
+                background-size: cover !important;
+                background-position: center center;
+                .app-title {font-size: 48px !important;}
+                .appbox {
+                    .app {
+                        width: 130px !important; 
+                        height: 130px !important;
+                        .iconbox {
+                            .icon {
+                                width: 80px !important;
+                                height: 80px !important;
+                            }
+                            .app-desc {font-size: 11px !important;}
+                        }
+                    }
+                }
+            }
+            .coupon-wrap {
+                height: 630px;
+                .withcoupon {
+                    flex-direction: column;
+                    gap: 30px !important;
+                    .coupons {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+        .youtube-wrap {
+            .tube-title {font-size: 36px !important;}
+            .krispper {
+                .krispper-img {display: none;}
+                flex-direction: column;
+            }
+            iframe {
+                max-width: 375px !important;
+            }
+        }
+        footer {
+            flex-direction: column;
+            .footer-text {
+                gap: 20px !important;
+                font-size: 10px !important;
+            }
+        }
+    } 
+}

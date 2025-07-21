@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이진희 | 버거킹 리디자인</title>
+    <link href="./css/main.css" rel="stylesheet">
+    <!-- 아이콘 -->
+    <link href="https://cdn.materialdesignicons.com/7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+    <!-- 스와이퍼 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+       <nav class="navbar">
+            <div class="logo"></div>
+            <!-- 햄버거 토글버튼 -->
+            <button class="hamburger" aria-label="메뉴 열기">
+                <span class="mdi mdi-hamburger"></span>
+            </button>
+
+            <div class="sidemenu">
+                <ul class="menu">
+                    <li>MENU</li>
+                    <li>STORY
+                        <ul class="submenu submenu1">
+                            <li>브랜드</li>                        
+                            <li>Why 버거킹</li>
+                            <li>ESG 경영</li>
+                            <li>Smart QSR</li>
+                            <li>수상실적</li>
+                            <li>광고영상</li>
+                        </ul>
+                    </li>
+                    <li>NEWS
+                        <ul class="submenu submenu2">
+                            <li>이벤트</li>
+                            <li>공지사항</li>
+                        </ul>
+                </li>
+                    <li>STORE</li>
+                    <li class="right">CUSTOMER</li>
+                </ul>
+            </div>
+            <div class="navright"><span class="mdi mdi-home-city-outline"></span> 가맹점모집</div>
+       </nav>
+    </header>
+    <!--섹션전체 -->
+    <div class="section-wrap">
+        <section class="slider">
+            <div class="swiper mainSwiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper slider-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide slide1"></div>
+                    <div class="swiper-slide slide2"></div>
+                    <div class="swiper-slide slide3"></div>
+                    <div class="swiper-slide slide4"></div>
+                    <div class="swiper-slide slide5"></div>
+                    <div class="swiper-slide slide6"></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- 아이템슬라이더(탭) -->
+        <section class="item-slider">
+            <div class="tab-slider-wrap">
+                <!-- 탭 버튼 -->
+                <div class="tab-buttons">
+                    <button class="tab active" data-tab="tab1">신메뉴</button>
+                    <button class="tab" data-tab="tab2">인기메뉴</button>
+                </div>
+
+                <!-- 탭 1 -->
+                <div class="tab-content active" id="tab1">
+                    <!-- 네비게이션 버튼 추가 -->
+                    <div class="swiper-button-prev" id="prev1"></div>
+                    <div class="swiper-button-next" id="next1"></div>
+                    <!-- 슬라이더 -->
+                    <div class="swiper itemSwiper1 item-swiper">
+                        <!-- 미디어쿼리 스와이퍼 안내 -->
+                        <div class="slider-overlay">
+                            <span class="overlay-text">
+                                swiper &gt;&gt;
+                            </span>
+                        </div>
+
+                        <div class="swiper-wrapper item-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/n_menu1.png" alt="버거1" />
+                                <p class="item-title">오리지널스 메이플 갈릭</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/n_menu2.png" alt="버거2" />
+                                <p class="item-title">크리미 할라피뇨 파퍼</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/n_menu3.png" alt="버거3" />
+                                <p class="item-title">치폴레 할라피뇨 파퍼</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/n_menu4.png" alt="버거4" />
+                                <p class="item-title">오리지널스 뉴욕 스테이크</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/n_menu5.png" alt="버거5" />
+                                <p class="item-title">크리스퍼 클래식</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/n_menu6.png" alt="버거6" />
+                                <p class="item-title">크리스퍼 클래식 BLT</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/n_menu7.png" alt="텐더" />
+                                <p class="item-title">크리스퍼 텐더</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/n_menu8.png" alt="선데이1" />
+                                <p class="item-title">킹플로트</p>
+                            </div> 
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/n_menu9.png" alt="선데이2" />
+                                <p class="item-title">초코 브라우니 킹퓨전</p>
+                            </div> 
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/n_menu10.png" alt="선데이3" />
+                                <p class="item-title">카라멜 버터쿠키 킹퓨전</p>
+                            </div>                         
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 탭 2 -->
+                <div class="tab-content" id="tab2">
+                    <!-- 네비게이션 버튼 추가 -->
+                    <div class="swiper-button-prev" id="prev2"></div>
+                    <div class="swiper-button-next" id="next2"></div>
+
+                    <!--아이템 슬라이더 -->
+                    <div class="swiper itemSwiper2 item-swiper">
+                        <div class="swiper-wrapper item-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/p_menu1.png" alt="인기1" />
+                                <p class="item-title">와퍼 세트</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/p_menu2.png" alt="인기2" />
+                                <p class="item-title">통새우 와퍼 세트</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/p_menu3.png" alt="인기3" />
+                                <p class="item-title">롱치킨버거</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/p_menu4.png" alt="인기4" />
+                                <p class="item-title">슈림프버거</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/p_menu5.png" alt="인기5" />
+                                <p class="item-title">비프&슈림프버거</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/p_menu6.png" alt="인기6" />
+                                <p class="item-title">너겟킹</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/p_menu7.png" alt="인기7" />
+                                <p class="item-title">바삭킹</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/new_popular/p_menu8.png" alt="인기8" />
+                                <p class="item-title">밀크 선데이</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 버거킹 앱 배너 -->
+        <section class="app-banner">
+            <!-- app-wrap -->
+            <div class="app-wrap"> <!--app내용물 : 1600w-->
+                <div class="withapp">
+                    <h1 class="app-title">With BURGER KING APP</h1>
+                    <div class="appbox">
+                        <div class="app app1">
+                            <div class="iconbox">
+                                <div class="icon icon1"></div>
+                                <p class="app-desc">주변 매장 찾기</p>
+                            </div>
+                        </div>
+                        <div class="app app2">
+                            <div class="iconbox">
+                                <div class="icon icon2"></div>
+                                <p class="app-desc">매장 픽업하기</p>
+                            </div>
+                        </div>
+                        <div class="app app3">
+                            <div class="iconbox">
+                                <div class="icon icon3"></div>
+                                <p class="app-desc">매장 딜리버리</p>
+                            </div>
+                        </div>
+                        <div class="app app4">
+                            <div class="iconbox">
+                                <div class="icon icon4"></div>
+                                <p class="app-desc">할인쿠폰 사용</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+
+            <!-- coupon-wrap -->
+            <div class="coupon-wrap">  <!--쿠폰 내용물 -->
+                <h1 class="app-title app-title1">WELCOME COUPON</h1>
+                <div class="withcoupon">                
+                    <div class="coupons">
+                        <div class="coupon-img">
+                            <div class="coupon coupon1"><img src="./img/app/coupon1.png" alt="할인쿠폰"></div>
+                            <div class="coupon coupon2"><img src="./img/app/coupon2.png" alt="생일쿠폰"></div>
+                            <div class="coupon coupon3"><img src="./img/app/coupon3.png" alt="첫가입쿠폰"></div>
+                        </div>
+                        <div class="coupon-desc">
+                        <p>1. 멤버십 회원 전용 특가 쿠폰(매장용)</p>
+                        <p>2. 생일쿠폰</p>
+                        <p>3. 주니어 와퍼 무료 쿠폰(첫가입 혜택)</p>
+                        </div>
+                    </div>
+                    <div class="qrcode">
+                        <div class="qr-img"></div>
+                        <p class="qr-text">APP 다운받기</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 400:225 / 500:281 -->
+        <section class="youtube-wrap">
+            <h1 class="tube-title">KING's Model</h1>
+            <div class="krispper">
+                <div class="krispper-girl">
+                    <!-- 노윤서비디오 -->
+                    <!-- # 1 --> 
+                    <iframe width="500" height="281" 
+                    src="https://www.youtube.com/embed/XVtZdaS7ZN8" 
+                    title="[버거킹] Chicken Lover’s Burger, KRISPPER" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                    </iframe>
+                    <!-- # 2 -->
+                    <iframe width="500" height="281" 
+                    src="https://www.youtube.com/embed/P_wGP2nBH8o" 
+                    title="[버거킹] 난 와퍼를 그닥 좋아하지 않아, 근데..." 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>   
+                    </iframe>
+                </div>
+
+                <!-- 중앙 크리스퍼 버거 -->
+                <div class="krispper-img">
+                    <img src="./img/krispper2.png" alt="크리스퍼버거">
+                </div>
+
+                <div class="krispper-boy">
+                    <!-- 추영우비디오 -->
+                    <!-- # 3 -->
+                    <iframe width="500" height="281" 
+                    src="https://www.youtube.com/embed/_S7nzkO2Jwo" 
+                    title="[버거킹] Chicken Lover’s Burger, KRISPPER" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                    </iframe>
+                    <!-- # 4 -->
+                    <iframe width="500" height="281"  
+                    src="https://www.youtube.com/embed/huoWFLt21Og" 
+                    title="[버거킹] 와퍼는 내 스타일 아냐, 근데..." 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                    </iframe>  
+                </div>               
+            </div>
+        </section>
+    </div> <!--section-wrap-->
+
+    <footer>
+        <div class="logo-icon">
+            <div class="footer-logo"></div>
+            <div class="footer-icon">
+                <div class="sns"><a href="https://www.instagram.com/burgerkingkorea/">
+                    <img src="./img/icon/social.png" alt="인스타">
+                </a></div>
+                <div class="sns"><a href="https://www.facebook.com/burgerkingkorea">
+                    <img src="./img/icon/facebook.png" alt="페이스북">
+                </a></div>
+                <div class="sns"><a href="https://x.com/BurgerKing_KOR">
+                    <img src="./img/icon/twitter.png" alt="트위터">
+                </a></div>
+                <div class="sns"><a href="https://www.youtube.com/@burgerking_korea">
+                    <img src="./img/icon/youtube.png" alt="유튜브">
+                </a></div>
+            </div>
+        </div>
+        <div class="footer-text">
+            <div class="f-text1">
+                <p>이용약관</p>
+                <p>개인정보처리방침</p>
+                <p>위치정보 이용약관</p>
+                <p>법적고지</p>
+                <p>고정형 영상정보처리기기 운영방침</p>
+            </div>
+            <div class="f-text2">
+                <p>서울 특별시 종로구 삼봉로 71 G타워 4F, 5F</p>
+                <p>사업자등록번호 : 101-86-76277</p>
+                <p>통신판매업 신고 : 2016-서울종로-1050</p>
+                <p>(주) 비케이알 대표이사 : 이동형</p>
+                <p>ⓒBKR Co.,Ltd. All right Reserved</p>
+            </div>
+        </div>
+    </footer>
+</div> <!--wrapper-->
+<script src="./js/main.js"></script>
+<script src="./js/swiper.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>

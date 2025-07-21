@@ -1,0 +1,321 @@
+@import 'mediaquary';
+@import 'swiper';
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+// 공통요소
+*{margin: 0; padding: 0;}
+body {
+  font-family: 'yg-jalnan';
+  background-color: #502314;
+}
+li {list-style: none;}
+a {
+  text-decoration: none; 
+  color: black;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+section {margin-bottom: 50px;}
+
+
+.wrapper {
+  header {
+    width: 100%;
+    height: 70px; 
+    position: fixed;
+    z-index: 999;
+    background: #f5ebdc;
+    color: #d62300;
+    nav {
+      width: 95%;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo{
+        width: 200px;
+        height: 50px;
+        background: url(../img/logo/header_logo.svg) no-repeat center center;
+      }
+      .hamburger {display: none;}
+      .menu {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        display: flex;
+        text-align: center;
+        cursor: pointer;
+        > li{
+          width: 120px;
+          height: 70px;
+          line-height: 70px;
+          font-size: 18px;
+          .submenu {
+            width: 120px;
+            height: 0;
+            overflow: hidden;
+            background: rgba(245, 235, 220, .8);
+            transition: all 0.5s;
+            li {
+              width: 100%;
+              height: 50px;
+              line-height: 50px;
+              font-size: 14px;
+              transition: all 0.3s ease;
+            }
+            li:hover {background-color: rgb(245, 235, 220);}
+          }
+        }
+        .right {text-align: right !important;}
+        > li:hover {color: #502314;}
+        > li:hover .submenu1 {
+          height: 300px;
+        }
+        > li:hover .submenu2 {
+          height: 100px;
+        }
+      }
+      .navright {
+        border: 2px solid;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 14px;
+        transition: all .3s;
+        cursor: pointer;
+      }
+      .navright:hover {
+        background-color: #d62300;
+        color: #f5ebdc;
+      }
+    }
+  } //header 끝
+
+  .section-wrap {
+    width: 1600px;
+    margin: 0 auto;
+    padding-top: 69px;
+    box-sizing: border-box;
+  }
+}
+
+// 앱 혜택 광고 배너
+.app-banner {
+width: 100%;
+height: 750px;
+color: #d62300;
+box-sizing: border-box;
+margin-bottom: 100px !important; //다른섹션은 50px
+  .app-title {
+    font-size: 50px;
+    margin-bottom: 50px;
+    -webkit-text-stroke: .5px rgba(255, 255, 255,.8);
+  }
+  .app-wrap {
+    height: 500px;
+    background: url('../img/app/bg_pickup.svg') no-repeat center;
+    background-position: 0 -250px;
+    background-size: cover;
+    box-sizing: border-box;
+
+    .withapp {
+      padding: 10px 20px;
+
+      .appbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+        .app {
+          width: 300px;
+          height: 300px;
+          background-color: rgba(255, 255, 255, .7);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
+          .iconbox {
+            text-align: center;
+            .icon {
+              width: 150px;
+              height: 150px;
+              margin-bottom: 10px;
+              position: relative;
+              transition: all 0.3s;
+
+              &:hover {
+                animation: shake 0.5s ease-in-out;
+                scale: 1.1;
+              }
+            }
+            // 애니메이션 좌우로 흔들거리는 효과
+            @keyframes shake {
+              0%   { transform: translateX(0) rotate(0deg); }
+              20%  { transform: translateX(-5px) rotate(-3deg); }
+              40%  { transform: translateX(5px) rotate(3deg); }
+              60%  { transform: translateX(-5px) rotate(-2deg); }
+              80%  { transform: translateX(5px) rotate(2deg); }
+              100% { transform: translateX(0) rotate(0deg); }
+            }
+
+            .app-desc {
+              font-size: 24px;
+              color: #502314;
+            }
+
+            // icon 이미지삽입
+            .icon1 {
+              background: url(../img/app/app1_img.png) no-repeat center center;
+              background-size: contain;
+            }
+            .icon2 {
+              background: url(../img/app/app2_img.png) no-repeat center center;
+              background-size: contain;
+            }
+            .icon3 {
+              background: url(../img/app/app3_img.png) no-repeat center center;
+              background-size: contain;
+            }
+            .icon4 {
+              background: url(../img/app/app4_img.png) no-repeat center center;
+              background-size: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .coupon-wrap {
+    background-color: #198737;
+    height: 250px;
+    padding: 10px 20px;
+    .app-title1 {margin-bottom: 10px !important;}
+    
+    .withcoupon {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 100px;
+      .coupons {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        .coupon-img{
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          .coupon {
+            width: 70px;
+            height: 140px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .coupon-desc {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          font-size: 24px;
+          color: #fff;
+        }
+      }
+      .qrcode {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        .qr-img {
+          width: 120px;
+          height: 120px;
+          background: url(../img/app/qrcode.png) center center;
+          background-size: cover;
+        }
+        .qr-text {
+          color: #fff;
+          font-size: 18px;
+        }
+      }
+    }  
+  }
+}
+
+
+// 유튜브 섹션
+.youtube-wrap {
+  width: 100%;
+  margin-bottom: 100px;
+  .tube-title {
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .krispper {
+    display: flex;
+    .krispper-girl {
+      text-align: left;
+    }
+    .krispper-boy {
+      text-align: right;
+    }
+    iframe {border-radius: 20px;}
+  }
+}
+
+//footer
+footer {
+  width: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+  background-color: #f5ebdc;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .footer-logo {
+    width: 500px;
+    height: 100px;
+    background: url(../img/logo/footer_logo.svg) no-repeat center center;
+    background-size: contain;
+  }
+  .footer-icon {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    .sns {
+      width: 35px; 
+      height: 35px;
+      img {
+        width: 100%; height: 100%;
+        border-radius: 50%;
+        transition: all 0.1s;
+      }
+    }
+  }
+  .footer-text {
+    font-family:Arial, Helvetica, sans-serif;
+    color: #89665B;
+    font-weight: 500;
+    display: flex;
+    gap: 50px;
+  }
+}
+
+
+
+
+
+
+
